@@ -1,5 +1,5 @@
 const pageLoad = () => {
-    document.addEventListener('DOMContentLoaded', function() {
+    return document.addEventListener('DOMContentLoaded', function() {
         // alert("Ready!");
         
     }, false)
