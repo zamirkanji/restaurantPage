@@ -1,3 +1,5 @@
+import { Element } from "./app.js";
+
 const contactPage = () => {
 
 }

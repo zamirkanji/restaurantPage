@@ -1,6 +1,14 @@
+import { Element } from "./app.js";
+
 const aboutPage = () => {
-    console.log('test about page on load');
     const mainDiv = document.querySelector('#content');
+    const aboutContainer = new Element('div', 'about-container').create();
+    
+    mainDiv.appendChild(aboutContainer);
+
+    // mainDiv.appendChild(aboutContainer);
+    // aboutContainer.append(bodyContainer);
+
 }
 
 export default aboutPage;

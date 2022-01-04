@@ -1,27 +1,35 @@
 const pageLoad = (f) => {
+    // const header = () => {
+    //     const mainDiv = document.querySelector('#content');
+    //     const mainHeader = new Element('div', 'main-header').create();
+    //     mainDiv.appendChild(mainHeader);
+    // };
     return document.addEventListener('DOMContentLoaded', f, false);
 }
 
-class CreateElement {
-    constructor(elName, type, classList) {
-        this.elName = elName;
+class Element {
+    constructor(type, classList) {   
         this.type = type;
         this.classList = classList;
+        this.create = () => {
+            const n = document.createElement(`${this.type}`)
+            n.classList.add(`${this.classList}`);
+            return n;
+        };
+        this.testLog = (y) => {
+            console.log(y);
+        }
     }
-
-    create() {
-        const n = document.createElement(`${this.type}`)
+    text(t, f) {
+        t.textContent = f;
     }
-    addClass() {
-        n.classList.add(`${this.classList}`);
-    }
-    append() {
-        
+    append(t) {
+        this.appendChild(t);
     }
 }
 
 // export default pageLoad;
 export {
     pageLoad, 
-    CreateElement
+    Element
 }
