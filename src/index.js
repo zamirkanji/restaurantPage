@@ -1,5 +1,5 @@
 import {pageLoad, Element}from './app.js';
-import aboutPage from './about.js';
+import createPage from './about.js';
 import menuPage from './menu.js';
 import contactPage from './contact.js';
 import './style.css';
@@ -20,8 +20,6 @@ const headerFooter = (() => {
         btnMenu.textContent = 'Menu';
         btnContact.textContent = 'Contact';
 
-        // btnAbout.text(btnAbout, 'About');
-        // btnAbout.testLog('hello');
         
         mainDiv.appendChild(mainHeader);
         mainHeader.append(btnAbout);
@@ -44,23 +42,55 @@ const headerFooter = (() => {
 })();
 
 headerFooter.createHeader();
-pageLoad(aboutPage());
 headerFooter.createFooter();
+ 
+const callAboutPage = () => {
+    const about = createPage();
+    console.log(about);
+    return () => {
+        let m = about.createMainDiv();
+        let t = about.createAboutTitle(m);
+        let d = about.createAboutDescription(m);
+        about.addText(t, 'Test', 'test-class');
+    }
+}
+
+const callMenuPage = () => {
+    const menu = menuPage();
+
+    return () => {
+        
+    }
+
+}
+const callContactPage = () => {
+    const contact = contactPage();
+}
+
+pageLoad(callAboutPage());
+
+
+
+
 
 //main container (#content)
 const allBtns = document.getElementsByClassName('tab');
 console.log(allBtns);
+for (let i = 0; i < allBtns.length; i++) {
+    console.log(allBtns[i]);
+}
 
 
 
+// const addImg = () => {
+    // const imgWrapper = document.createElement('div');
+    // imgWrapper.classList.add('backgroundImg');
 
-// const imgWrapper = document.createElement('div');
-// imgWrapper.classList.add('backgroundImg');
+    // const myImg = new Image();
+    // myImg.src = exterior;
 
-// const myImg = new Image();
-// myImg.src = exterior;
+    // imgWrapper.appendChild(myImg);
+    // mainDiv.appendChild(imgWrapper);
 
-// imgWrapper.appendChild(myImg);
-// mainDiv.appendChild(imgWrapper);
-
-// document.body.appendChild(mainDiv);
+    // document.body.appendChild(mainDiv);
+// }
