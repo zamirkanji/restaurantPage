@@ -27,8 +27,11 @@ const createPage = () => {
         return f.textContent = t;
     }
 
-    const createElement = (t, f) => {
+    const createElement = (t, f, p) => {
         const el = new Element(t, f).create();
+        const parent = document.querySelector(`.${p}`);
+        console.log(el, parent);
+        parent.appendChild(el);
         return el;
     }
 

@@ -1,4 +1,4 @@
-import {pageLoad, Element}from './app.js';
+import {pageLoad, Element} from './app.js';
 import createPage from './about.js';
 import menuPage from './menu.js';
 import contactPage from './contact.js';
@@ -7,8 +7,9 @@ import exterior from './img/exterior.jpeg';
 import exterior2 from './img/kevin1.jpeg';
 
 const mainDiv = document.querySelector('#content');
-//loading about page on defualt
-const headerFooter = (() => {
+
+//create header and footer div on main page (Stays for all tabs)
+const headerFooter = () => {
 
     const createHeader = () => {
         const mainHeader = new Element('div', 'main-header').create();
@@ -39,10 +40,12 @@ const headerFooter = (() => {
         createHeader,
         createFooter
     }
-})();
+};
 
-headerFooter.createHeader();
-headerFooter.createFooter();
+const headFoot = headerFooter();
+
+headFoot.createHeader();
+
  
 const callAboutPage = () => {
     const about = createPage();
@@ -51,7 +54,8 @@ const callAboutPage = () => {
         let m = about.createMainDiv();
         let t = about.createAboutTitle(m);
         let d = about.createAboutDescription(m);
-        about.addText(t, 'Test', 'test-class');
+        let para = about.createElement('p', 'title-text', 'title-container');
+        about.addText(para, 'hello');
     }
 }
 
@@ -69,7 +73,7 @@ const callContactPage = () => {
 
 pageLoad(callAboutPage());
 
-
+headFoot.createFooter();
 
 
 
