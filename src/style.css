@@ -14,7 +14,7 @@ body {
     padding: 0;
     /* background-color: rgb(44, 44, 44); */
     display: flex;
-
+    overflow: auto;
 }
 
 
@@ -29,48 +29,11 @@ body {
     flex-direction: column;
 }
 
-.main-container {
-    flex: 2;
-    border: 2px solid burlywood;
-    display: flex;
-    flex-direction: column;
-}
-
-.descrip-container {
-    flex: 1;
-    display: flex;
-}
-
-.backgroundImg {
-    /* height: 50px;
-    width: 50px; */
-    flex: 1;
-    background-image: url('./img/exterior.jpeg');
-    background-repeat: no-repeat;
-    /* background-size: 50px 50px;    */
-    background-size: cover;
-}
-
-.title-container {
-    flex: .25;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-text {
-    font-size: 28px;
-    font-weight: 100;
-    text-decoration: none;
-    list-style: none;
-
-}
-
 .main-header {
     margin: 0;
     padding: 0;
     /* position: fixed; */
-    height: 50px;
+    height: 100px;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -98,6 +61,72 @@ body {
 .tab:hover {
     background-color: burlywood;
 }
+
+
+
+
+/* each page */
+.main-container {
+    /* flex: 2; */
+    width: 100%;
+    height: auto;
+    border: 2px solid burlywood;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    /* flex: .25; */
+    /* height: 100px; */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text {
+    font-size: 28px;
+    font-weight: 100;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.descrip-container {
+    height: 750px;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundImg {
+    background-image: url('./img/exterior.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.d2-container {
+    height: 500px;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d2-text {
+    font-size: 20px;
+    font-weight: 100;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
 
 .menu-container {
     flex: 1;

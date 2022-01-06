@@ -54,10 +54,13 @@ const callAboutPage = () => {
         let m = about.createMainDiv();
         let t = about.createAboutTitle(m);
         let d = about.createAboutDescription(m);
-        let para = about.createElement('p', 'title-text', 'title-container');
-        // console.log(para);
-        about.addText(para, 'About Us');
+        let d2 = about.createAboutDescription(m);
         about.addClass(d, 'backgroundImg');
+        about.addClass(d2, 'd2-container');
+        let para = about.createElement('p', 'title-text', 'title-container');
+        let para2 = about.createElement('p', 'd2-text', 'd2-container')
+        about.addText(para, 'About Us');
+        about.addText(para2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida quis blandit turpis cursus. Et netus et malesuada fames ac turpis egestas integer eget. Libero volutpat sed cras ornare arcu dui. Nullam non nisi est sit amet facilisis magna etiam tempor. Nibh tellus molestie nunc non. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Fermentum leo vel orci porta non. Pharetra sit amet aliquam id diam maecenas. Accumsan in nisl nisi scelerisque. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta. Feugiat in ante metus dictum at. In pellentesque massa placerat duis ultricies lacus sed.');
     }
 }
 
@@ -75,18 +78,33 @@ const callContactPage = () => {
 
 pageLoad(callAboutPage());
 
-headFoot.createFooter();
+// headFoot.createFooter();
 
-
-
-//main container (#content)
-const allBtns = document.getElementsByClassName('tab');
-console.log(allBtns);
-for (let i = 0; i < allBtns.length; i++) {
-    console.log(allBtns[i]);
+const checkWhichBtn = (btn) => {
+    if (btn.textContent === 'About') {
+        return 'About';
+    }
+    if (btn.textContent === 'Menu') {
+        return 'Menu';
+    }
+    if (btn.textContent === 'Contact') {
+        return 'Contact';
+    }
 }
 
+//main container (#content)
+const allBtns = document.querySelectorAll('.tab');
+console.log(allBtns);
+allBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(btn);
+        let returnBtn = checkWhichBtn(btn);
+    })
+})
+for (let i = 0; i < allBtns.length; i++) {
+    console.log(allBtns[i]);
 
+}
 
 // const addImg = () => {
     // const imgWrapper = document.createElement('div');
