@@ -1,7 +1,12 @@
-import { Element } from "./app.js";
+import { Element, createPage } from "./app.js";
 
-const contactPage = () => {
+const createContactPage = () => {
+    const contact = createPage();
+    return () => {
 
+    }
 }
 
-export default contactPage;
+export {
+    createContactPage
+}

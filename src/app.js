@@ -1,9 +1,4 @@
 const pageLoad = (f) => {
-    // const header = () => {
-    //     const mainDiv = document.querySelector('#content');
-    //     const mainHeader = new Element('div', 'main-header').create();
-    //     mainDiv.appendChild(mainHeader);
-    // };
     return document.addEventListener('DOMContentLoaded', f, false);
 }
 
@@ -26,10 +21,59 @@ class Element {
     append(t) {
         this.appendChild(t);
     }
+    addClass(b, c) {
+        return this.classList.add(c);
+    }
+}
+
+const createPage = () => {
+    const mainDiv = document.querySelector('#content');
+
+    const createMainDiv = () => {
+        const mainContainer = new Element('div', 'main-container').create();
+        mainDiv.appendChild(mainContainer);
+        return mainContainer;
+    }
+    const createAboutDescription = (f) => {
+        const descriptionContainer = new Element('div', 'descrip-container').create();
+        f.appendChild(descriptionContainer);
+        return descriptionContainer;
+    }
+    const createAboutTitle = (f) => {
+        const titleContainer = new Element('div', 'title-container').create();
+        f.appendChild(titleContainer);
+        return titleContainer;
+    }
+
+    const addText = (f,t,c) => {
+        f.classList.add(c);
+        return f.textContent = t;
+    }
+
+    const addClass = (f, c) => {
+        return f.classList.add(c);
+    }
+
+    const createElement = (t, f, p) => {
+        const el = new Element(t, f).create();
+        const parent = document.querySelector(`.${p}`);
+        parent.appendChild(el);
+        return el;
+    }
+
+    return {
+        createMainDiv,
+        createAboutDescription,
+        createAboutTitle,
+        addText,
+        addClass,
+        createElement
+    }
 }
 
 // export default pageLoad;
 export {
     pageLoad, 
-    Element
+    Element,
+    createPage
 }

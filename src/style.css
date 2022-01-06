@@ -93,7 +93,7 @@ body {
 }
 
 .descrip-container {
-    height: 750px;
+    height: 500px;
     width: 100%;
     margin: 0;
     padding: 15px;
@@ -105,7 +105,9 @@ body {
 .backgroundImg {
     background-image: url('./img/exterior.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    /* max-width: 100%;
+    height: max-content; */
 }
 
 .d2-container {
