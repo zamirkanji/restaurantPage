@@ -27,6 +27,10 @@ const createPage = () => {
         return f.textContent = t;
     }
 
+    const addClass = (f, c) => {
+        return f.classList.add(c);
+    }
+
     const createElement = (t, f, p) => {
         const el = new Element(t, f).create();
         const parent = document.querySelector(`.${p}`);
@@ -40,6 +44,7 @@ const createPage = () => {
         createAboutDescription,
         createAboutTitle,
         addText,
+        addClass,
         createElement
     }
 }

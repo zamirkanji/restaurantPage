@@ -55,7 +55,9 @@ const callAboutPage = () => {
         let t = about.createAboutTitle(m);
         let d = about.createAboutDescription(m);
         let para = about.createElement('p', 'title-text', 'title-container');
-        about.addText(para, 'hello');
+        // console.log(para);
+        about.addText(para, 'About Us');
+        about.addClass(d, 'backgroundImg');
     }
 }
 
