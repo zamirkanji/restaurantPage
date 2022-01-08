@@ -1,3 +1,6 @@
+import { createAboutPage } from "./about";
+import { createHeader, createFooter } from "./navFooter";
+
 const pageLoad = (f) => {
     return document.addEventListener('DOMContentLoaded', f, false);
 }
@@ -13,6 +16,9 @@ class Element {
         };
         this.testLog = (y) => {
             console.log(y);
+        }
+        this.addClass = (c) => {
+            return this.classList.add(c);
         }
     }
     text(t, f) {
@@ -31,6 +37,7 @@ const createPage = () => {
 
     const createMainDiv = () => {
         const mainContainer = new Element('div', 'main-container').create();
+        console.log('uuuu');
         mainDiv.appendChild(mainContainer);
         return mainContainer;
     }
