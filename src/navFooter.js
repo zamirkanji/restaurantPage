@@ -13,22 +13,26 @@ const createHeader = () => {
     btnMenu.textContent = 'Menu';
     btnContact.textContent = 'Contact';
 
+    const navBar = document.querySelector('.tab');
+    // navBar.classList.add('toggle-display');
+
 
     const menuOpen = new Element('button', 'menuOpen').create();
-    // menuOpen.addClass('test');
-    const line1 = new Element('span', 'line1').create();
-    // const line2 = new Element('span', 'line2').create();
-    line1.textContent = '=';
-    // line2.textContent = '__';
+    const menuIconContainer = new Element('span', 'menuIconContainer').create();
+
+    const logoDiv = new Element('div', 'logo-div').create();
+    const logoText = new Element('p', 'logo-txt').create();
+    logoText.textContent = 'Zammy\'s';
     
     mainDiv.appendChild(mainHeader);
     mainHeader.append(btnWrapper);
     btnWrapper.append(btnAbout);
     btnWrapper.append(btnMenu);
     btnWrapper.append(btnContact);
+    mainHeader.append(logoDiv);
+    logoDiv.append(logoText);
     mainHeader.append(menuOpen);
-    menuOpen.append(line1);
-    // menuOpen.append(line2);
+    menuOpen.append(menuIconContainer);
 }
 
 const createFooter = () => {

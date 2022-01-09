@@ -6,6 +6,7 @@ import { createFooter, createHeader } from './navFooter.js';
 import './style.css';
 import exterior from './img/exterior.jpeg';
 import exterior2 from './img/kevin1.jpeg';
+import menuIcon from './img/menu.png';
 
 const mainDiv = document.querySelector('#content');
 
@@ -14,7 +15,18 @@ createHeader();
 pageLoad(createAboutPage());
 // createFooter();
 
+const changeHeaderOnScroll = () => {
+    // console.log('test scroll');
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.querySelector('.main-header').style.opacity = '.5';
+    } else {
+        document.querySelector('.main-header').style.opacity = '1';
+    }
+}
 
+window.onscroll = () => {
+    changeHeaderOnScroll();
+}
 
 //call about page 
 const callAboutPage = () => createAboutPage();
