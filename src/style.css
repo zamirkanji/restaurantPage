@@ -12,7 +12,6 @@ body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: rgb(44, 44, 44); */
     display: flex;
     overflow: auto;
 }
@@ -31,26 +30,29 @@ body {
 .main-header {
     margin: 0;
     padding: 0;
-    position: fixed;
+    /* position: fixed; */
+    position: sticky;
+    top: 0px;
     height: auto;
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     background-color: rgb(37, 41, 51);
-    opacity: .6;
+    opacity: 1;
 }
 
-.btnWrapper {
+.tab-Wrapper {
     height: auto;
-    flex: 2;
+    flex: 1;
+    background-color: cadetblue;
+    display: flex;
 }
 
 .tab {
     width: 100px;
     height: 50px;
-    
     background-color: rgb(37, 41, 51);
     border: none;
     outline: none;
@@ -89,12 +91,14 @@ body {
 }
 
 .line1 {
+    height: 50px;
     margin: 0;
     padding: 0;
     height: auto;
     font-size: 32px;
     line-height: 10px;
     font-weight: bold;
+    
 }
 
 .logo-div {

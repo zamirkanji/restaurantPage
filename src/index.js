@@ -18,8 +18,11 @@ pageLoad(createAboutPage());
 const changeHeaderOnScroll = () => {
     // console.log('test scroll');
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+
+        // document.querySelector('.main-header').style.position = 'fixed';
         document.querySelector('.main-header').style.opacity = '.5';
     } else {
+        // document.querySelector('.main-header').style.position = 'static';
         document.querySelector('.main-header').style.opacity = '1';
     }
 }
