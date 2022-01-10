@@ -9,16 +9,17 @@ class Element {
     constructor(type, classList) {   
         this.type = type;
         this.classList = classList;
-        this.create = () => {
-            const n = document.createElement(`${this.type}`)
+        this.create = (c) => {
+            const n = document.createElement(`${this.type}`);
             n.classList.add(`${this.classList}`);
+            n.classList.add(`${c}`);
             return n;
         };
         this.testLog = (y) => {
             console.log(y);
         }
-        this.addClass = (c) => {
-            return this.classList.add(c);
+        this.addClass = (e, c) => {
+            return e.classList.add(c);
         }
     }
     text(t, f) {
@@ -35,20 +36,19 @@ class Element {
 const createPage = () => {
     const mainDiv = document.querySelector('#content');
 
-    const createMainDiv = () => {
-        const mainContainer = new Element('div', 'main-container').create();
-        console.log('uuuu');
+    const createMainDiv = (c) => {
+        const mainContainer = new Element('div', 'main-container').create(c);
         mainDiv.appendChild(mainContainer);
         return mainContainer;
     }
-    const createAboutDescription = (f) => {
+    const createAboutDescription = (a) => {
         const descriptionContainer = new Element('div', 'descrip-container').create();
-        f.appendChild(descriptionContainer);
+        a.appendChild(descriptionContainer);
         return descriptionContainer;
     }
-    const createAboutTitle = (f) => {
+    const createAboutTitle = (a) => {
         const titleContainer = new Element('div', 'title-container').create();
-        f.appendChild(titleContainer);
+        a.appendChild(titleContainer);
         return titleContainer;
     }
 

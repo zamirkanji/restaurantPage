@@ -69,6 +69,7 @@ body {
     font-size: 18px;
     font-weight: 100;
     color: white;
+    /* box-shadow: burlywood; */
 }
 
 .tab:hover {
@@ -127,22 +128,21 @@ body {
     justify-content: center;
     align-items: center;
     /* border: 2px solid burlywood; */
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 
 .logo-txt {
     margin: 0;
     padding: 0;
     /* height: 100%; */
-    font-size: 24px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 100;
     text-align: center;
     /* text-decoration: none; */
     /* list-style: none; */
-    font-weight: lighter;
     line-height: 25px;
     /* z-index: 10; */
-    color: rgb(37, 41, 51)
+    color: burlywood;
 }
 
 
@@ -154,6 +154,8 @@ body {
     height: auto; */
     position: absolute;
     top: 60px;
+    right: 0;
+    left: 0;
     /* top: 50px; */
     /* border: 2px solid burlywood; */
     display: flex;
@@ -172,7 +174,7 @@ body {
 
 .title-text {
     font-size: 34px;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: none;
     list-style: none;
 
@@ -211,11 +213,11 @@ body {
 }
 
 .d2-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
     list-style: none;
-    font-weight: lighter;
+    font-weight: 300;
     line-height: 25px;
     z-index: 10;
     /* color: white; */
@@ -242,5 +244,10 @@ body {
 
 .toggle-display {
     visibility: hidden;
+}
+
+.active {
+    background-color: burlywood;
+    border: 2px solid rgb(37, 41, 51);
 }
 

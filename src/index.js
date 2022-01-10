@@ -8,11 +8,10 @@ import exterior from './img/exterior.jpeg';
 import exterior2 from './img/kevin1.jpeg';
 import menuIcon from './img/menu.png';
 
-const mainDiv = document.querySelector('#content');
+const CONTENT = document.querySelector('#content');
 
-//create header and footer div on main page (Stays for all tabs)
-createHeader();
-pageLoad(createAboutPage());
+
+
 // createFooter();
 
 const changeHeaderOnScroll = () => {
@@ -28,7 +27,11 @@ window.onscroll = () => {
 }
 
 //call about page 
-const callAboutPage = () => createAboutPage();
+const callAboutPage = () => {
+    const about = document.querySelector('.btn-about');
+    about.classList.add('active');
+    return createAboutPage();
+}
 
 //call menu page
 const callMenuPage = () => createMenuPage();
@@ -37,45 +40,39 @@ const callMenuPage = () => createMenuPage();
 const callContactPage = () => createContactPage();
 
 
+//create header and footer div on main page (Stays for all tabs)
+createHeader();
+pageLoad(callAboutPage());
 
-
-
-
-
-const checkWhichBtn = (btn) => {
-    if (btn.textContent === 'About') {
-        return callAboutPage();
+//add active class, removes active btn already has
+const addActiveClass = (() => {
+    const btns = document.querySelector('.tab-wrapper');
+    const allBtns = btns.getElementsByClassName('tab');
+    for (let i = 0; i < allBtns.length; i++) {
+        allBtns[i].addEventListener('click', (e) => {
+            const target = e.target;
+            const current = btns.getElementsByClassName('active');
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace('active', '');
+            }
+            return target.classList.add('active');
+        })
     }
-    if (btn.textContent === 'Menu') {
-        return callMenuPage();
-    }
-    if (btn.textContent === 'Contact') {
-        return 'Contact';
-    }
-}
+})();
 
-//main container (#content)
-const allBtns = document.querySelectorAll('.tab');
-console.log(allBtns);
-allBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        checkWhichBtn(btn);
+const changePages = (() => {
+    const btns = document.querySelectorAll('.tab');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            // const page = document.querySelector('.main-container');
+            // page.parentNode.removeChild(page);
+
+            // if (btn.textContent === 'Menu') {callMenuPage()};
+            // if (btn.textContent === 'Contact') {callContactPage()};
+            // if (btn.textContent === 'About') {callAboutPage()};
+            // console.log(btn);
+        })
     })
-})
-for (let i = 0; i < allBtns.length; i++) {
-    console.log(allBtns[i]);
+})();
 
-}
-
-// const addImg = () => {
-    // const imgWrapper = document.createElement('div');
-    // imgWrapper.classList.add('backgroundImg');
-
-    // const myImg = new Image();
-    // myImg.src = exterior;
-
-    // imgWrapper.appendChild(myImg);
-    // mainDiv.appendChild(imgWrapper);
-
-    // document.body.appendChild(mainDiv);
-// }

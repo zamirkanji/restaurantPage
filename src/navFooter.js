@@ -5,9 +5,9 @@ const mainDiv = document.querySelector('#content');
 const createHeader = () => {
     const mainHeader = new Element('div', 'main-header').create();
     const btnWrapper = new Element('div', 'tab-wrapper').create();
-    const btnAbout = new Element('button', 'tab').create();
-    const btnMenu = new Element('button', 'tab').create();
-    const btnContact = new Element('button', 'tab').create();
+    const btnAbout = new Element('button', 'tab').create('btn-about');
+    const btnMenu = new Element('button', 'tab').create('btn-menu');
+    const btnContact = new Element('button', 'tab').create('btn-contact');
     
     btnAbout.textContent = 'About';
     btnMenu.textContent = 'Menu';
