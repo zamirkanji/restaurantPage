@@ -1,20 +1,34 @@
 import { Element } from "./app";
+import { createAboutPage } from "./about";
+import { createMenuPage } from "./menu";
 
 const mainDiv = document.querySelector('#content');
 
 const createHeader = () => {
+
     const mainHeader = new Element('div', 'main-header').create();
     const btnWrapper = new Element('div', 'tab-wrapper').create();
     const btnAbout = new Element('button', 'tab').create('btn-about');
     const btnMenu = new Element('button', 'tab').create('btn-menu');
     const btnContact = new Element('button', 'tab').create('btn-contact');
+
+    const anchorAbout = new Element('a', 'anchorAbout').create();
+
+    const anchorMenu = new Element('a', 'anchorMenu').create();
+ 
     
     btnAbout.textContent = 'About';
     btnMenu.textContent = 'Menu';
     btnContact.textContent = 'Contact';
 
-    const navBar = document.querySelector('.tab');
-    // navBar.classList.add('toggle-display');
+    btnAbout.type = 'button';
+
+    
+    // anchorAbout.href = '#';
+    // anchorAbout.onclick = 'createAboutPage(); return false';
+
+    // anchorMenu.href = '#';
+    // anchorMenu.onclick = 'createMenuPage(); return false';
 
 
     const menuOpen = new Element('button', 'menuOpen').create();
@@ -26,6 +40,12 @@ const createHeader = () => {
     
     mainDiv.appendChild(mainHeader);
     mainHeader.append(btnWrapper);
+
+    // btnWrapper.append(anchorAbout);
+    //anchor elements appended to each button 
+    // anchorAbout.append(btnAbout);
+    // anchorMenu.append(btnMenu);
+
     btnWrapper.append(btnAbout);
     btnWrapper.append(btnMenu);
     btnWrapper.append(btnContact);

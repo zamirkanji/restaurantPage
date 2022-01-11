@@ -31,6 +31,7 @@ const callAboutPage = () => {
     const about = document.querySelector('.btn-about');
     about.classList.add('active');
     return createAboutPage();
+    // return false;
 }
 
 //call menu page
@@ -63,16 +64,26 @@ const addActiveClass = (() => {
 const changePages = (() => {
     const btns = document.querySelectorAll('.tab');
     btns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
 
-            // const page = document.querySelector('.main-container');
-            // page.parentNode.removeChild(page);
+            const page = document.querySelector('.main-container');
+            page.parentNode.removeChild(page);
 
-            // if (btn.textContent === 'Menu') {callMenuPage()};
-            // if (btn.textContent === 'Contact') {callContactPage()};
-            // if (btn.textContent === 'About') {callAboutPage()};
-            // console.log(btn);
+            if (btn.textContent === 'Menu') {
+                console.log(btn);
+                callMenuPage();
+            };
+            if (btn.textContent === 'Contact') {
+                console.log(btn);
+                callContactPage();
+            };
+            if (btn.textContent === 'About') {
+                console.log(btn);
+                callAboutPage();
+            };
         })
+        return false;
     })
 })();
 

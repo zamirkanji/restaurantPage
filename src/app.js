@@ -33,7 +33,7 @@ class Element {
     }
 }
 
-const createPage = () => {
+const createPage = (name) => {
     const mainDiv = document.querySelector('#content');
 
     const createMainDiv = (c) => {
@@ -41,7 +41,7 @@ const createPage = () => {
         mainDiv.appendChild(mainContainer);
         return mainContainer;
     }
-    const createAboutDescription = (a) => {
+    const createBodyDiv = (a) => {
         const descriptionContainer = new Element('div', 'descrip-container').create();
         a.appendChild(descriptionContainer);
         return descriptionContainer;
@@ -69,8 +69,9 @@ const createPage = () => {
     }
 
     return {
+        name,
         createMainDiv,
-        createAboutDescription,
+        createBodyDiv,
         createAboutTitle,
         addText,
         addClass,
