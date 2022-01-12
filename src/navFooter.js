@@ -6,7 +6,7 @@ const mainDiv = document.querySelector('#content');
 
 const createHeader = () => {
 
-    const mainHeader = new Element('div', 'main-header').create();
+    const mainHeader = new Element('div', 'main-header').create('header-nav-logo');
     const btnWrapper = new Element('div', 'tab-wrapper').create();
     const btnAbout = new Element('button', 'tab').create('btn-about');
     const btnMenu = new Element('button', 'tab').create('btn-menu');
