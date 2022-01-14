@@ -21,16 +21,22 @@ const createMenuPage = () => {
         menu.addText(paraTitle, 'Menu');
 
         menu.addClass(menuItem, 'menu-item-1');
-        let para = menu.createElement('p', 'menu-text', 'menu-item-1');
-        menu.addText(para, 'Lobster Soup');
+        let itemTitle1 = menu.createElement('p', 'menu-title-1', 'menu-item-1');
+        menu.addText(itemTitle1, 'Lobster Soup');
+        const para1 = menu.createElement('p', 'menu-text-1', 'menu-item-1');
+        menu.addText(para1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
         
         menu.addClass(menuItem2, 'menu-item-2');
-        let para2 = menu.createElement('p', 'menu-text', 'menu-item-2');
-        menu.addText(para2, 'Chicken');
+        let itemTitle2 = menu.createElement('p', 'menu-title-2', 'menu-item-2');
+        menu.addText(itemTitle2, 'Chicken');
+        const para2 = menu.createElement('p', 'menu-text-2', 'menu-item-2');
+        menu.addText(para2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
 
         menu.addClass(menuItem3, 'menu-item-3');
-        let para3 = menu.createElement('p', 'menu-text', 'menu-item-3');
-        menu.addText(para3, 'Wagyu Beef');
+        let itemTitle3 = menu.createElement('p', 'menu-title-3', 'menu-item-3');
+        menu.addText(itemTitle3, 'Wagyu Beef');
+        const para3 = menu.createElement('p', 'menu-text-3', 'menu-item-3');
+        menu.addText(para3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
         
     // }
 }

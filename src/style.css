@@ -168,6 +168,8 @@ body {
     align-items: center;
 }
 
+
+
 .backgroundImg {
     background-image: url('./img/kevin1.jpeg');
     background-repeat: no-repeat;
@@ -204,12 +206,24 @@ body {
     flex: 1;
 }
 
-.menu-text {
+.menu-item-1, .menu-item-2, .menu-item-3 {
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* padding: 0px 15px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-title-1, .menu-title-2, .menu-title-3 {
     margin: 0;
     padding: 0;
     /* height: 100%;
     width: 100%; */
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 100;
     text-decoration: none;
     list-style: none;
