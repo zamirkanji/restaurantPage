@@ -147,6 +147,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: burlywood; */
 }
 
 .title-text {
@@ -180,7 +181,7 @@ body {
 .d2-container {
     height: 500px;
     margin: 0;
-    padding: 15px;
+    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,9 +198,8 @@ body {
     text-decoration: none;
     list-style: none;
     font-weight: 200;
-    line-height: 25px;
+    line-height: 26px;
     z-index: 10;
-    /* color: white; */
 }
 
 .menu-container {
@@ -210,27 +210,47 @@ body {
     height: 500px;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 50px;
     /* padding: 0px 15px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    background-color: rgb(37, 41, 51);
+    border: 5px solid white;
 }
 
 .menu-title-1, .menu-title-2, .menu-title-3 {
     margin: 0;
     padding: 0;
+    flex: .5;
     /* height: 100%;
     width: 100%; */
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 400;
     text-decoration: none;
     list-style: none;
     font-weight: 200;
     line-height: 25px;
     z-index: 10;
-    color: rgb(37, 41, 51);
+    color: white;
+    
+}
+
+.menu-text-1, .menu-text-2, .menu-text-3 {
+    margin: 0;
+    padding: 0;
+    flex: 2;
+    /* height: 100%;
+    width: 100%; */
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 200;
+    line-height: 36px;
+    color: burlywood;
 }
 
 .contact-container {
