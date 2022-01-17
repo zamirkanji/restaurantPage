@@ -1,10 +1,13 @@
 import { createAboutPage } from "./about";
 import { createHeader, createFooter } from "./navFooter";
 
+
+//on page load, call create about page
 const pageLoad = (f) => {
     return document.addEventListener('DOMContentLoaded', f, false);
 }
 
+//class constructor for dynamic elements 
 class Element {
     constructor(type, classList) {   
         this.type = type;
@@ -33,7 +36,9 @@ class Element {
     }
 }
 
-const createPage = (name) => {
+
+//factory function for similar task as class constructor 
+const createPage = () => {
     const mainDiv = document.querySelector('#content');
 
     const createMainDiv = (c) => {
@@ -69,7 +74,6 @@ const createPage = (name) => {
     }
 
     return {
-        name,
         createMainDiv,
         createBodyDiv,
         createAboutTitle,

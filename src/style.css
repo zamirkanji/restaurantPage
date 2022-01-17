@@ -13,8 +13,7 @@ html {
 body {
     min-height: 100%;
     margin: 0;
-    padding: 0;
-    /* display: flex; */
+    padding: 0;   
     overflow: visible;
 }
 
@@ -23,9 +22,11 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    /* display: flex; */
-    /* flex-direction: column; */
-    position: relative;
+    /* position: absolute; */
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
 }
 
 .main-header {
@@ -38,7 +39,7 @@ body {
     width: 100%;
     /* flex: .5; */
     height: 60px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     align-items: center;
     background-color: rgb(37, 41, 51);
@@ -117,29 +118,35 @@ body {
 .logo-txt {
     margin: 0;
     padding: 0;
-    /* height: 100%; */
     font-size: 18px;
     font-weight: 100;
     text-align: center;
-    /* text-decoration: none; */
-    /* list-style: none; */
     line-height: 25px;
-    /* z-index: 10; */
     color: burlywood;
 }
 
 
+
+
+
+
+
+
+
 /* each page */
 .main-container {
-    position: absolute;
-    top: 60px;
+    position: relative;
+    top: 60px;                       
     right: 0;
     left: 0;
+    /* bottom: 100px; */
     display: flex;
     flex-direction: column;
     transform: none;
     perspective: none;
     filter: none;
+    padding: 5px;
+    overflow: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 }
 
 .title-container {
@@ -147,7 +154,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: burlywood; */
 }
 
 .title-text {
@@ -163,13 +169,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    /* padding: 0px 15px; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 
 .backgroundImg {
     background-image: url('./img/kevin1.jpeg');
@@ -181,18 +184,16 @@ body {
 .d2-container {
     height: 500px;
     margin: 0;
-    padding: 25px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(37, 41, 51);
 }
 
 .d2-text {
-    /* font-size: 18px; */
     margin: 0;
     padding: 0;
-    /* height: 100%;
-    width: 100%; */
     font-size: 18px;
     font-weight: 100;
     text-decoration: none;
@@ -200,6 +201,7 @@ body {
     font-weight: 200;
     line-height: 26px;
     z-index: 10;
+    color: burlywood;
 }
 
 .menu-container {
@@ -211,22 +213,18 @@ body {
     width: 100%;
     margin: 0;
     padding: 50px;
-    /* padding: 0px 15px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
     background-color: rgb(37, 41, 51);
-    border: 5px solid white;
 }
 
 .menu-title-1, .menu-title-2, .menu-title-3 {
     margin: 0;
     padding: 0;
     flex: .5;
-    /* height: 100%;
-    width: 100%; */
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
@@ -242,14 +240,13 @@ body {
     margin: 0;
     padding: 0;
     flex: 2;
-    /* height: 100%;
-    width: 100%; */
+    width: 85%;
     font-size: 18px;
     font-weight: 100;
     text-decoration: none;
     list-style: none;
     font-weight: 200;
-    line-height: 36px;
+    line-height: 25px;
     color: burlywood;
 }
 
@@ -275,5 +272,27 @@ body {
 .active {
     background-color: burlywood;
     border: 2px solid rgb(37, 41, 51);
+}
+
+
+
+
+
+.main-footer {
+    /* position: fixed; */
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    /* top: 5px; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: burlywood;
+    opacity: 1;
+    z-index: 2;
 }
 

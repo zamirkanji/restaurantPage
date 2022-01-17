@@ -11,10 +11,6 @@ const createHeader = () => {
     const btnAbout = new Element('button', 'tab').create('btn-about');
     const btnMenu = new Element('button', 'tab').create('btn-menu');
     const btnContact = new Element('button', 'tab').create('btn-contact');
-
-    const anchorAbout = new Element('a', 'anchorAbout').create();
-
-    const anchorMenu = new Element('a', 'anchorMenu').create();
  
     
     btnAbout.textContent = 'About';
@@ -22,13 +18,6 @@ const createHeader = () => {
     btnContact.textContent = 'Contact';
 
     btnAbout.type = 'button';
-
-    
-    // anchorAbout.href = '#';
-    // anchorAbout.onclick = 'createAboutPage(); return false';
-
-    // anchorMenu.href = '#';
-    // anchorMenu.onclick = 'createMenuPage(); return false';
 
 
     const menuOpen = new Element('button', 'menuOpen').create();
@@ -58,6 +47,7 @@ const createHeader = () => {
 const createFooter = () => {
     const mainFooter = new Element('div', 'main-footer').create();
     const para = new Element('p', 'footer-text').create();
+    para.textContent = 'Zammy\'s © - Site was made for The Odin Project';
     mainDiv.appendChild(mainFooter);
     mainFooter.append(para);
 }

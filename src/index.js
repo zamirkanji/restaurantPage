@@ -44,6 +44,7 @@ const callContactPage = () => createContactPage();
 //create header and footer div on main page (Stays for all tabs)
 createHeader();
 pageLoad(callAboutPage());
+createFooter();
 
 //add active class, removes active btn already has
 const addActiveClass = (() => {
